@@ -11,7 +11,7 @@ function App() {
 
   return (
     <div className="App">
-        {data ? data.map((e)=>{<PostCard title={e.title} body={e.body} />}) : <h3>No data</h3>}
+        {data ? data.map((e)=><PostCard title={e.title} body={e.body} />) : <h3>No data</h3>}
     </div>
   );
 }
