@@ -1,6 +1,7 @@
 import './App.css';
 import {getPosts} from './api/main.js'
 import {useState , useEffect} from 'react'
+import PostCard from './components/PostCard.jsx';
 
 function App() {
   const [data , setData] = useState(null)
@@ -10,7 +11,7 @@ function App() {
 
   return (
     <div className="App">
-        {data ? data.map((e)=><p className='obj'>{e.title}</p>) : <h3>No data</h3>}
+        {data ? data.map((e)=>{<PostCard title={e.title} body={e.body} />}) : <h3>No data</h3>}
     </div>
   );
 }
